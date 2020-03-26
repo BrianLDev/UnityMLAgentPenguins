@@ -1,1 +1,1 @@
-# UnityMLAgentPenguins
+# Unity ML Agent - Penguins Demo
