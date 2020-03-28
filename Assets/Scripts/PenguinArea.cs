@@ -111,10 +111,10 @@ public class PenguinArea : Area
         /// Place the penguin in the area
         /// </summary>
         private void PlacePenguin() {
-            Rigidbody rigidbody = penguinAgent.GetComponent<rigidbody>();
+            Rigidbody rigidbody = penguinAgent.GetComponent<Rigidbody>();
             rigidbody.velocity = Vector3.zero;
             rigidbody.angularVelocity = Vector3.zero;
-            penguinAgent.transform.position = ChooseRandomPosition(transform.position, 0f, 360f, 0f, 9f) + Vector3.Up * 0.5f;
+            penguinAgent.transform.position = ChooseRandomPosition(transform.position, 0f, 360f, 0f, 9f) + Vector3.up * 0.5f;
             penguinAgent.transform.rotation = Quaternion.Euler(0f, UnityEngine.Random.Range(0f, 360f), 0f);
         }
 
@@ -122,7 +122,7 @@ public class PenguinArea : Area
         /// Place the baby in the area
         /// </summary>
         private void PlaceBaby() {
-            Rigidbody rigidbody = penguinBaby.GetComponent<rigidbody>();
+            Rigidbody rigidbody = penguinBaby.GetComponent<Rigidbody>();
             rigidbody.velocity = Vector3.zero;
             rigidbody.angularVelocity = Vector3.zero;
             penguinBaby.transform.position = ChooseRandomPosition(transform.position, -45f, 45f, 4f, 9f) + Vector3.up * 0.5f;
