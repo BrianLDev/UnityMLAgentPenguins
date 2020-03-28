@@ -6,6 +6,7 @@ using TMPro;        // TextMesh Pro
 
 public class PenguinArea : Area
 {
+    #region PUBLIC VARIABLES
     [Tooltip("The agent inside the area")]
     public PenguinAgent penguinAgent;
 
@@ -17,9 +18,12 @@ public class PenguinArea : Area
 
     [Tooltip("Prefab of a live fish")]
     public Fish fishPrefab;
+    #endregion
 
+    #region PRIVATE VARIABLES
     private PenguinAcademy penguinAcademy;
     private List<GameObject> fishList;
+    #endregion
 
     // Start is called before the first frame update
     void Start()
