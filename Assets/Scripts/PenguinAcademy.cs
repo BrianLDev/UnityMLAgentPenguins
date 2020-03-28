@@ -5,10 +5,10 @@ using MLAgents;     // Unity Machine Learning Agents library
 
 public class PenguinAcademy : Academy
 {
-    #region PUBLIC VARIABLES
+#region PUBLIC VARIABLES
     public float FishSpeed { get; private set; }
     public float FeedRadius { get; private set; }
-    #endregion
+#endregion
 
     // Start is called before the first frame update
     void Start()

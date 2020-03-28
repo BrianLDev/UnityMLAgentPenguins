@@ -5,7 +5,7 @@ using MLAgents;     // Unity Machine Learning Agents library
 
 public class PenguinAgent : Agent
 {
-    #region PUBLIC VARIABLES
+#region PUBLIC VARIABLES
     [Tooltip("How fast the agent moves forward")]
     public float moveSpeed = 5f;
 
@@ -17,17 +17,16 @@ public class PenguinAgent : Agent
 
     [Tooltip("Prefab of the regurgitated fish that appears when the baby is fed")]
     public GameObject regurgitatedFishPrefab;
-    #endregion
+#endregion
 
-    #region PRIVATE VARIABLES
+#region PRIVATE VARIABLES
     private PenguinArea penguinArea;
     private PenguinAcademy penguinAcademy;
     new private Rigidbody rigidbody;
     private GameObject baby;
-
     private bool isFull; // If true, penguin has a full stomach
     private float feedRadius = 0f;
-    #endregion
+#endregion
 
 
     /// <summary>
