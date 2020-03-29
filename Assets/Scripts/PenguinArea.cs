@@ -14,7 +14,8 @@ public class PenguinArea : Area
     public GameObject penguinBaby;
 
     [Tooltip("The TextMeshPro text that shows the cumulative reward of the agent")]
-    public TextMeshPro cumulativeRewardText;
+    // public TextMeshPro cumulativeRewardText;
+    public TextMeshProUGUI cumulativeRewardText;
 
     [Tooltip("Prefab of a live fish")]
     public Fish fishPrefab;
