@@ -1,0 +1,52 @@
+Base path: '/Applications/Unity Installs/2019.3.10f1/Unity.app/Contents', plugins path '/Applications/Unity Installs/2019.3.10f1/PlaybackEngines'
+Cmd: initializeCompiler
+Cmd: compileComputeKernel
+  api=14 insize=7960 outsize=3135 ok=1
+Cmd: compileComputeKernel
+  api=14 insize=9919 outsize=2923 ok=1
+Cmd: translateComputeKernel
+  api=14 insize=2923 outsize=4344 ok=1
+Cmd: compileComputeKernel
+  api=14 insize=49356 outsize=3772 ok=1
+Cmd: compileComputeKernel
+  api=14 insize=49356 outsize=3064 ok=1
+Cmd: compileComputeKernel
+  api=14 insize=49356 outsize=3727 ok=1
+Cmd: compileComputeKernel
+  api=14 insize=49356 outsize=3084 ok=1
+Cmd: translateComputeKernel
+  api=14 insize=5001 outsize=7075 ok=1
+Cmd: translateComputeKernel
+  api=14 insize=4348 outsize=5351 ok=1
+Cmd: translateComputeKernel
+  api=14 insize=4086 outsize=4503 ok=1
+Cmd: translateComputeKernel
+  api=14 insize=8877 outsize=17928 ok=1
+Cmd: compileComputeKernel
+  api=14 insize=29386 outsize=2545 ok=1
+Cmd: compileComputeKernel
+  api=14 insize=29386 outsize=2399 ok=1
+Cmd: compileComputeKernel
+  api=14 insize=29386 outsize=2187 ok=1
+Cmd: compileComputeKernel
+  api=14 insize=29386 outsize=2740 ok=1
+Cmd: compileComputeKernel
+  api=14 insize=29386 outsize=2659 ok=1
+Cmd: translateComputeKernel
+  api=14 insize=2311 outsize=2313 ok=1
+Cmd: translateComputeKernel
+  api=14 insize=1572 outsize=1659 ok=1
+Cmd: translateComputeKernel
+  api=14 insize=1458 outsize=1512 ok=1
+Cmd: translateComputeKernel
+  api=14 insize=1481 outsize=1562 ok=1
+Cmd: translateComputeKernel
+  api=14 insize=2957 outsize=3678 ok=1
+Cmd: translateComputeKernel
+  api=14 insize=2904 outsize=3633 ok=1
+Cmd: translateComputeKernel
+  api=14 insize=2808 outsize=3488 ok=1
+Cmd: compileComputeKernel
+  api=14 insize=45671 outsize=4252 ok=1
+
+Quitting shader compiler process

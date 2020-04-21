@@ -1,0 +1,60 @@
+Base path: '/Applications/Unity Installs/2019.3.10f1/Unity.app/Contents', plugins path '/Applications/Unity Installs/2019.3.10f1/PlaybackEngines'
+Cmd: initializeCompiler
+Cmd: compileComputeKernel
+  api=14 insize=7960 outsize=3081 ok=1
+Cmd: translateComputeKernel
+  api=14 insize=4178 outsize=6112 ok=1
+Cmd: compileComputeKernel
+  api=14 insize=9919 outsize=3101 ok=1
+Cmd: translateComputeKernel
+  api=14 insize=2955 outsize=4390 ok=1
+Cmd: compileComputeKernel
+  error: 1 plat 14 at Tensor.cginc(141): use of potentially uninitialized variable (ReadonlyTensor::SafeGet)
+  api=14 insize=49356 outsize=4778 ok=1
+Cmd: compileComputeKernel
+  api=14 insize=49356 outsize=3727 ok=1
+Cmd: compileComputeKernel
+  api=14 insize=49356 outsize=3906 ok=1
+Cmd: translateComputeKernel
+  api=14 insize=3576 outsize=3675 ok=1
+Cmd: translateComputeKernel
+  api=14 insize=3562 outsize=3646 ok=1
+Cmd: translateComputeKernel
+  api=14 insize=3581 outsize=3709 ok=1
+Cmd: translateComputeKernel
+  api=14 insize=3999 outsize=4400 ok=1
+Cmd: translateComputeKernel
+  api=14 insize=4206 outsize=5109 ok=1
+Cmd: translateComputeKernel
+  api=14 insize=3593 outsize=3797 ok=1
+Cmd: compileComputeKernel
+  error: 1 plat 14 at Tensor.cginc(155): use of potentially uninitialized variable (ReadonlyTensor::SafeGet)
+  api=14 insize=68835 outsize=13769 ok=1
+Cmd: compileComputeKernel
+  api=14 insize=29386 outsize=2148 ok=1
+Cmd: compileComputeKernel
+  api=14 insize=29386 outsize=2326 ok=1
+Cmd: compileComputeKernel
+  api=14 insize=29386 outsize=2600 ok=1
+Cmd: compileComputeKernel
+  api=14 insize=29386 outsize=2754 ok=1
+Cmd: compileComputeKernel
+  api=14 insize=29386 outsize=2632 ok=1
+Cmd: translateComputeKernel
+  api=14 insize=2282 outsize=2219 ok=1
+Cmd: translateComputeKernel
+  api=14 insize=2404 outsize=2410 ok=1
+Cmd: translateComputeKernel
+  api=14 insize=2360 outsize=2374 ok=1
+Cmd: translateComputeKernel
+  api=14 insize=2997 outsize=3704 ok=1
+Cmd: translateComputeKernel
+  api=14 insize=2820 outsize=3477 ok=1
+Cmd: compileComputeKernel
+  api=14 insize=45671 outsize=12312 ok=1
+Cmd: compileComputeKernel
+  api=14 insize=4103 outsize=2913 ok=1
+Cmd: translateComputeKernel
+  api=14 insize=2905 outsize=4002 ok=1
+
+Quitting shader compiler process

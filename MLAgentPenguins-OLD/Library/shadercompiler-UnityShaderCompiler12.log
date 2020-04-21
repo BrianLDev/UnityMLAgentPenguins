@@ -1,0 +1,58 @@
+Base path: '/Applications/Unity Installs/2019.3.10f1/Unity.app/Contents', plugins path '/Applications/Unity Installs/2019.3.10f1/PlaybackEngines'
+Cmd: initializeCompiler
+Cmd: translateComputeKernel
+  api=14 insize=3180 outsize=4061 ok=1
+Cmd: compileComputeKernel
+  api=14 insize=9919 outsize=3102 ok=1
+Cmd: translateComputeKernel
+  api=14 insize=2953 outsize=4389 ok=1
+Cmd: translateComputeKernel
+  api=14 insize=4178 outsize=7054 ok=1
+Cmd: compileComputeKernel
+  api=14 insize=49356 outsize=3353 ok=1
+Cmd: compileComputeKernel
+  api=14 insize=49356 outsize=3374 ok=1
+Cmd: compileComputeKernel
+  api=14 insize=49356 outsize=3130 ok=1
+Cmd: compileComputeKernel
+  api=14 insize=49356 outsize=3757 ok=1
+Cmd: compileComputeKernel
+  api=14 insize=49356 outsize=3605 ok=1
+Cmd: translateComputeKernel
+  api=14 insize=3683 outsize=4048 ok=1
+Cmd: translateComputeKernel
+  api=14 insize=3934 outsize=4290 ok=1
+Cmd: translateComputeKernel
+  api=14 insize=3536 outsize=3633 ok=1
+Cmd: translateComputeKernel
+  api=14 insize=4609 outsize=5852 ok=1
+Cmd: translateComputeKernel
+  api=14 insize=3594 outsize=3782 ok=1
+Cmd: compileComputeKernel
+  api=14 insize=68835 outsize=3877 ok=1
+Cmd: translateComputeKernel
+  api=14 insize=7284 outsize=12879 ok=1
+Cmd: compileComputeKernel
+  api=14 insize=29386 outsize=2182 ok=1
+Cmd: compileComputeKernel
+  api=14 insize=29386 outsize=2181 ok=1
+Cmd: compileComputeKernel
+  api=14 insize=29386 outsize=1228 ok=1
+Cmd: compileComputeKernel
+  api=14 insize=29386 outsize=2855 ok=1
+Cmd: compileComputeKernel
+  api=14 insize=29386 outsize=2773 ok=1
+Cmd: compileComputeKernel
+  api=14 insize=29386 outsize=2989 ok=1
+Cmd: translateComputeKernel
+  api=14 insize=2509 outsize=2584 ok=1
+Cmd: translateComputeKernel
+  api=14 insize=3020 outsize=3590 ok=1
+Cmd: translateComputeKernel
+  api=14 insize=2780 outsize=3450 ok=1
+Cmd: compileComputeKernel
+  api=14 insize=45671 outsize=5617 ok=1
+Cmd: translateComputeKernel
+  api=14 insize=4252 outsize=7187 ok=1
+
+Quitting shader compiler process
