@@ -731,5 +731,10 @@ PrefabInstance:
       propertyPath: m_BehaviorType
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3563421087706881837, guid: 647525db991b54f62a82f1fb365a32e9,
+        type: 3}
+      propertyPath: m_InferenceDevice
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 647525db991b54f62a82f1fb365a32e9, type: 3}
