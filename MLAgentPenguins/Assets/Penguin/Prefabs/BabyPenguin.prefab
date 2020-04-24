@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 8273032800240958372}
   m_Layer: 0
   m_Name: BabyPenguin
-  m_TagString: Untagged
+  m_TagString: baby
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
