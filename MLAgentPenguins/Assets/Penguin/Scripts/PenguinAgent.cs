@@ -10,6 +10,9 @@ public class PenguinAgent : Agent
     [Tooltip("How fast the agent turns")]
     public float turnSpeed = 180f;
 
+    [Tooltip("How many steps between decisions")]
+    public int decisionInterval = 4;        // BL NOTE - Had to add this.  It was used in the tutorial but not in the script
+
     [Tooltip("Prefab of the heart that appears when the baby is fed")]
     public GameObject heartPrefab;
 
@@ -117,7 +120,7 @@ public class PenguinAgent : Agent
         // Request a decision every 5 steps. RequestDecision() automatically calls RequestAction(),
         // but for the steps in between, we need to call it explicitly to take action using the results
         // of the previous decision
-        if (StepCount % 5 == 0) {      // BL NOTE - GetStepCount() was replaced with StepCount in ML Agents 0.15.0
+        if (StepCount % decisionInterval == 0) {      // BL NOTE - GetStepCount() was replaced with StepCount in ML Agents 0.15.0
             RequestDecision();
         }
         else {
