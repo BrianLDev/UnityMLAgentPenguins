@@ -1,5 +1,7 @@
 ﻿using UnityEngine;
-using MLAgents;
+using Unity.MLAgents;
+// using Unity.MLAgents.Actuators;
+using Unity.MLAgents.Sensors;
 
 
 public class PenguinAgent : Agent
@@ -59,7 +61,7 @@ public class PenguinAgent : Agent
         transform.Rotate(transform.up * turnAmount * turnSpeed * Time.fixedDeltaTime);
 
         // Apply a tiny negative reward every step to encourage action
-        if (maxStep > 0) AddReward(-1f / maxStep);
+        if (MaxStep > 0) AddReward(-1f / MaxStep);
     }
 
     /// <summary>
@@ -68,7 +70,11 @@ public class PenguinAgent : Agent
     /// Behavior Type to "Heuristic Only" in the Behavior Parameters inspector.
     /// </summary>
     /// <returns>A vectorAction array of floats that will be passed into <see cref="AgentAction(float[])"/></returns>
-    public override float[] Heuristic() {
+    public override void Heuristic(float[] actions) {
+        // BL Note - Heuristic was changed in ML agents release 1
+        // The signature of Agent.Heuristic() was changed to take a float array as a parameter, instead of returning the array. 
+        // This was done to prevent a common source of error where users would return arrays of the wrong size. (#3765)
+
         float forwardAction = 0f;
         float turnAction = 0f;
         if (Input.GetKey(KeyCode.W)) {
@@ -84,8 +90,8 @@ public class PenguinAgent : Agent
             turnAction = 2f;
         }
 
-        // Put the actions into an array and return
-        return new float[] { forwardAction, turnAction };
+        // Actions 
+        actions = new float[] {forwardAction, turnAction};
     }
 
     /// <summary>
@@ -94,13 +100,15 @@ public class PenguinAgent : Agent
     public override void OnEpisodeBegin() {     // BL NOTE - AgentReset was renamed to OnEpisodeBegin in ML Agents 0.15.0
         isFull = false;
         penguinArea.ResetArea();
-        feedRadius = Academy.Instance.FloatProperties.GetPropertyWithDefault("feed_radius", 0f);
+        // feedRadius = Academy.Instance.FloatProperties.GetPropertyWithDefault("feed_radius", 0f);
+        // BL NOTE - Academy.FloatProperties was replaced by Academy.EnvironmentParameters. See the Migration Guide for more details on upgrading. (#3807)
+        feedRadius = Academy.Instance.EnvironmentParameters.GetWithDefault("feed_radius", 0f);
     }
 
     /// <summary>
     /// Collect all non-Raycast observations
     /// </summary>
-    public override void CollectObservations(MLAgents.Sensors.VectorSensor sensor) {     // BL NOTE - Agent.CollectObservations now takes a VectorSensor argument in ML Agents 0.15.0
+    public override void CollectObservations(VectorSensor sensor) {     // BL NOTE - Agent.CollectObservations now takes a VectorSensor argument in ML Agents 0.15.0
         // Whether the penguin has eaten a fish (1 float = 1 value)
         sensor.AddObservation(isFull);                                  // BL NOTE - AddVectorObs was replaced with sensor.AddObservation in ML Agents 0.15.0
 

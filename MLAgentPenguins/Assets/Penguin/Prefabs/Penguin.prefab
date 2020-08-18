@@ -13,9 +13,9 @@ GameObject:
   - component: {fileID: 2692120490233035836}
   - component: {fileID: 2448399708622482261}
   - component: {fileID: 2080396607546821815}
-  - component: {fileID: 1460718394345890850}
+  - component: {fileID: 6699190155477446351}
   - component: {fileID: 3612890259130240341}
-  - component: {fileID: -7681874155931532524}
+  - component: {fileID: 281429384445073857}
   m_Layer: 0
   m_Name: Penguin
   m_TagString: Untagged
@@ -117,7 +117,7 @@ CapsuleCollider:
   m_Height: 1.41
   m_Direction: 2
   m_Center: {x: 0, y: 0.22, z: 0.13}
---- !u!114 &1460718394345890850
+--- !u!114 &6699190155477446351
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -126,15 +126,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 4422679274858858720}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 18880f352d6874c0ba09e26a346b56e7, type: 3}
+  m_Script: {fileID: 11500000, guid: 5d1c4e0b1822b495aa52bc52839ecb30, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_BrainParameters:
-    vectorObservationSize: 8
-    numStackedVectorObservations: 1
-    vectorActionSize: 0200000003000000
-    vectorActionDescriptions: []
-    vectorActionSpaceType: 0
+    VectorObservationSize: 8
+    NumStackedVectorObservations: 1
+    VectorActionSize: 0200000003000000
+    VectorActionDescriptions: []
+    VectorActionSpaceType: 0
   m_Model: {fileID: 5022602860645237092, guid: 2e65b1ac1bcc04765886e01978851756, type: 3}
   m_InferenceDevice: 1
   m_BehaviorType: 0
@@ -156,7 +156,7 @@ MonoBehaviour:
   agentParameters:
     maxStep: 0
   hasUpgradedFromAgentParameters: 1
-  maxStep: 5000
+  MaxStep: 5000
   moveSpeed: 5
   turnSpeed: 180
   decisionInterval: 4
@@ -164,7 +164,7 @@ MonoBehaviour:
     type: 3}
   regurgitatedFishPrefab: {fileID: 1059379942855096178, guid: 15acd0b9512344340b6c63da02dad9cd,
     type: 3}
---- !u!114 &-7681874155931532524
+--- !u!114 &281429384445073857
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -173,7 +173,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 4422679274858858720}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e408e6b85e6294621bbe32627567091c, type: 3}
+  m_Script: {fileID: 11500000, guid: 6bb6b867a41448888c1cd4f99643ad71, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_SensorName: RayPerceptionSensor
