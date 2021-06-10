@@ -1,8 +1,8 @@
 ﻿using UnityEngine;
 using Unity.MLAgents;
-// using Unity.MLAgents.Actuators;
 using Unity.MLAgents.Sensors;
-
+using Unity.MLAgents.Actuators;
+using UnityEditor;
 
 public class PenguinAgent : Agent
 {
@@ -43,16 +43,17 @@ public class PenguinAgent : Agent
     /// Perform actions based on a vector of numbers
     /// </summary>
     /// <param name="vectorAction">The list of actions to take</param>
-    public override void OnActionReceived(float[] vectorAction) {    // BL NOTE - AgentAction was renamed to OnActionReceived in ML Agents 0.15.0
+    // public override void OnActionReceived(float[] vectorAction) {    // BL NOTE - AgentAction was renamed to OnActionReceived in ML Agents 0.15.0
+    public override void OnActionReceived(ActionBuffers actions) {    // BL NOTE - switched from float[] vectorAction to ActionBuffers
         // Convert the first action to forward movement
-        float forwardAmount = vectorAction[0];
+        float forwardAmount = actions.ContinuousActions[0];
 
         // Convert the second action to turning left or right
         float turnAmount = 0f;
-        if (vectorAction[1] == 1f) {
+        if (actions.ContinuousActions[1] == 1f) {
             turnAmount = -1f;
         }
-        else if (vectorAction[1] == 2f) {
+        else if (actions.ContinuousActions[1] == 2f) {
             turnAmount = 1f;
         }
 
@@ -70,11 +71,14 @@ public class PenguinAgent : Agent
     /// Behavior Type to "Heuristic Only" in the Behavior Parameters inspector.
     /// </summary>
     /// <returns>A vectorAction array of floats that will be passed into <see cref="AgentAction(float[])"/></returns>
-    public override void Heuristic(float[] actions) {
+    // public override void Heuristic(float[] actions) {
+    public override void Heuristic(in ActionBuffers actionsOut) {   // BL NOTE - switched from float[] actions to ActionBuffers
         // BL Note - Heuristic was changed in ML agents release 1
         // The signature of Agent.Heuristic() was changed to take a float array as a parameter, instead of returning the array. 
         // This was done to prevent a common source of error where users would return arrays of the wrong size. (#3765)
 
+        // BL TODO - RUNNING INTO SOME ERRORS IN THE CONVERSION TO ACTIONBUFFERS - LOOK INTO THIS AND ONACTIONRECEIVED
+        var continuousActions = actionsOut.ContinuousActions;
         float forwardAction = 0f;
         float turnAction = 0f;
         if (Input.GetKey(KeyCode.W)) {
@@ -91,7 +95,8 @@ public class PenguinAgent : Agent
         }
 
         // Actions 
-        actions = new float[] {forwardAction, turnAction};
+        continuousActions[0] = forwardAction;
+        continuousActions[1] = turnAction;
     }
 
     /// <summary>
